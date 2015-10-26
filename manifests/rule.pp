@@ -296,13 +296,13 @@ define logrotate::rule(
     }
   }
 
-  case $maxage {
-    'undef': {}
-    /^\d+$/: {}
-    default: {
-      fail("Logrotate::Rule[${name}]: maxage must be an integer")
-    }
-  }
+  #case $maxage {
+  #  'undef': {}
+  #  /^\d+$/: {}
+  #  default: {
+  #    fail("Logrotate::Rule[${name}]: maxage must be an integer")
+  #  }
+  #}
 
   case $minsize {
     'undef': {}
@@ -312,13 +312,13 @@ define logrotate::rule(
     }
   }
 
-  case $rotate {
-    'undef': {}
-    /^\d+$/: {}
-    default: {
-      fail("Logrotate::Rule[${name}]: rotate must be an integer")
-    }
-  }
+  #case $rotate {
+  #  'undef': {}
+  #  /^\d+$/: {}
+  #  default: {
+  #    fail("Logrotate::Rule[${name}]: rotate must be an integer")
+  #  }
+  #}
 
   case $size {
     'undef': {}
@@ -328,21 +328,21 @@ define logrotate::rule(
     }
   }
 
-  case $shredcycles {
-    'undef': {}
-    /^\d+$/: {}
-    default: {
-      fail("Logrotate::Rule[${name}]: shredcycles must be an integer")
-    }
-  }
+  #case $shredcycles {
+  #  'undef': {}
+  #  /^\d+$/: {}
+  #  default: {
+  #    fail("Logrotate::Rule[${name}]: shredcycles must be an integer")
+  #  }
+  #}
 
-  case $start {
-    'undef': {}
-    /^\d+$/: {}
-    default: {
-      fail("Logrotate::Rule[${name}]: start must be an integer")
-    }
-  }
+  #case $start {
+  # 'undef': {}
+  #  /^\d+$/: {}
+  # default: {
+  #    fail("Logrotate::Rule[${name}]: start must be an integer")
+  #  }
+  #}
 
   case $su {
     'undef',false: {}
